@@ -2,6 +2,9 @@ package Recursionfile;
 
 import java.util.*;
 
+// Input: s = ["h","e","l","l","o"]
+// Output: ["o","l","l","e","h"]
+
 public class ReverseString {
     public static void main(String[] args) {
         char s[] = { 'h', 'e', 'l', 'l', 'o' };
