@@ -14,8 +14,11 @@ public class WordMaze {
         for (int i = 0; i < board.length; i++) {
 
             for (int j = 0; j < board[0].length; j++) {
-
-                helper(ok, board, p, str, str.length(), i, j);
+               
+                if (board[i][j]== str.charAt(0)){
+                    helper(ok, board, p, str, str.length(), i, j);
+                }
+               
 
             }
 
@@ -38,13 +41,13 @@ public class WordMaze {
 
         ok[r][c] = true;
 
-        if (r < board.length - 1)
+        if (r < board.length - 1 && !ok[r + 1][c])
             helper(ok, board, p + board[r][c], str, length - 1, r + 1, c);
-        if (c < board[0].length - 1)
+        if (c < board[0].length - 1 && !ok[r][c + 1])
             helper(ok, board, p + board[r][c], str, length - 1, r, c + 1);
-        if (r > 0)
+        if (r > 0 && !ok[r - 1][c])
             helper(ok, board, p + board[r][c], str, length - 1, r - 1, c);
-        if (c > 0)
+        if (c > 0 && !ok[r][c - 1])
             helper(ok, board, p + board[r][c], str, length - 1, r, c - 1);
 
         ok[r][c] = false;
