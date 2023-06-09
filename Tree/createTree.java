@@ -4,19 +4,20 @@ import java.util.*;
 
 class Node {
     int data;
-    Node next;
-    Node prev;
+    Node right;
+    Node left;
 
     public Node(int data) {
         this.data = data;
-        this.next = null;// right
-        this.prev = null;// left
+        this.right = null;// right
+        this.left = null;// left
     }
+
 }
 
 public class createTree {
 
-    static Node create() {
+    public static Node create() {
         Scanner sc = new Scanner(System.in);
         int data;
         Node root = null;
@@ -30,9 +31,9 @@ public class createTree {
         root = new Node(data);
 
         System.out.println("enter the right value");
-        root.next = create();
+        root.right = create();
         System.out.println("now enter the left value");
-        root.prev = create();
+        root.left = create();
 
         return root;
 
@@ -40,36 +41,36 @@ public class createTree {
 
     // traverse inorder
 
-    static void traverse(Node root) {
+    public static void traverse(Node root) {
         if (root == null)
             return;
-        traverse(root.prev);
+        traverse(root.left);
         System.out.println(root.data);
-        traverse(root.next);
+        traverse(root.right);
         System.out.println(" ");
     }
 
     // travers postOrder
 
-    static void travers(Node root) {
+    public static void travers(Node root) {
         if (root == null) {
             return;
         }
 
-        travers(root.prev);
-        travers(root.next);
+        travers(root.left);
+        travers(root.right);
         System.out.println(root.data);
 
     }
 
     // travers preeOrder
-    static void travers3(Node root) {
+    public static void travers3(Node root) {
         if (root == null) {
             return;
         }
         System.out.println(root.data);
-        travers(root.prev);
-        travers(root.next);
+        travers(root.left);
+        travers(root.right);
 
     }
 
