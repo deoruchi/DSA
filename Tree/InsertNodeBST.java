@@ -12,12 +12,7 @@ public class InsertNodeBST extends createTree {
     }
 
     static void inserNode(Node root, int key) {
-        if (root.left == null && root.data < key) {
-
-        }
-        if (root.right == null) {
-
-        }
+    
         if (root.data > key) {
 
             if (root.left == null) {
@@ -28,8 +23,14 @@ public class InsertNodeBST extends createTree {
             inserNode(root.left, key);
         }
 
-        if (root.data < key)
-
+        if (root.data < key){
+             if (root.right == null) {
+                root.right = new Node(key);
+                return;
+            }
             inserNode(root.right, key);
+        }
+
+            
     }
 }
