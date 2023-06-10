@@ -5,5 +5,5 @@ i will be putting the 10 days in each new top as well as questions related to th
 
 ###dated : 7June (10 tree days)
 Starting with the Tree data structure .
-4-questions easy(when solving easy)
+3-questions easy(when solving easy)
 2-3 Questions medium level(when solving hard)
