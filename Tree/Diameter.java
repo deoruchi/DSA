@@ -22,8 +22,10 @@ public class Diameter extends CountNode {
     private static int dia(Node tree) {
         if (tree == null)
             return 0;
-
+        // here we are calculating diameter via nodes
         int a = 1 + height(tree.left) + height(tree.left);
+        // for path
+        // int a = height(tree.left) + height(tree.left);
 
         int s = dia(tree.left);
         int d = dia(tree.right);
