@@ -15,7 +15,7 @@ public class CheckBST extends createTree {
     // Both the left and right subtrees must also be binary search trees.
 
     public static void main(String[] args) {
-        Node tree = create();
+        Node tree = (Node) create();
         if (isBst(tree, Integer.MAX_VALUE, Integer.MIN_VALUE))
             System.out.println("Balanced");
         System.out.println("Unbalanced");
