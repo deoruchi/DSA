@@ -1,4 +1,3 @@
-package StackandQueue;
 
 class CreateStack extends Stack {
     public static void main(String[] args) {

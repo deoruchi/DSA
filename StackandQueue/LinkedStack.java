@@ -1,6 +1,4 @@
 
-package StackandQueue;
-
 import java.util.Scanner;
 
 class Node {
