@@ -1,6 +1,39 @@
 
 import java.util.*;
 
+import Recursionfile.remove;
+
+class MyStack2 {
+    Queue<Integer> q;
+
+    public MyStack2() {
+        q = new LinkedList<>();
+    }
+
+    public void push(int x) {
+
+        q.add(x);
+
+        for (int i = 0; i < q.size() - 1; i++) {
+            int a = q.poll();
+            q.add(a);
+        }
+
+    }
+
+    public int pop() {
+        return q.poll();
+    }
+
+    public int top() {
+        return q.peek();
+    }
+
+    public boolean empty() {
+        return q.isEmpty();
+    }
+}
+
 class MyStack {
     Queue<Integer> q;
     Queue<Integer> q2;
@@ -50,6 +83,15 @@ class im_stackfromqeuue {
         System.out.println(stack.pop());
         System.out.println(stack.empty());
 
+        MyStack2 stack2 = new MyStack2();
+        stack2.push(9);
+        stack2.push(12);
+        stack2.push(23);
+
+        System.out.println(stack2.pop());
+        System.out.println(stack2.top());
+        System.out.println(stack2.pop());
+        System.out.println(stack2.empty());
     }
 
 }
