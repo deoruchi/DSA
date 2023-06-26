@@ -7,3 +7,6 @@ i will be putting the 10 days in each new top as well as questions related to th
 Starting with the Tree data structure .
 3-questions easy(when solving easy)
 2-3 Questions medium level(when solving hard)
+
+###dated : 26june (9 days stackandqueue)
+questions on the stackand queue (3-4)
