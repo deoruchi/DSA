@@ -39,6 +39,7 @@ class MyStack {
     Queue<Integer> q2;
 
     public MyStack() {
+
         q = new LinkedList<Integer>();
         q2 = new LinkedList<Integer>();
     }
